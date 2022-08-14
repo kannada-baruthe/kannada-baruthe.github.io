@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <title> Learn Spoken Kannada Basics</title>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
+
+    <meta name="apple-mobile-web-app-title" content="Kannada Baruthe">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#F7F8F9">
+    <meta name="description"
+          content="Learn spoken Kannada phrases and pronunciation through English online or using our Android app. Kannada Baruthe means I know Kannada. We are a non profit helping people learn the Kannada language for free."/>
+    <meta name="keywords"
+          content="Learn, spoken, Kannada, language, pronunciation, phrases, free, Baruthe, English, online, pdf, basic, phrases, Android, iOS"/>
+
+    <meta name="url" content="https://kannadabaruthe.com/">
+    <meta name="locale" content="en_US">
+
+    <meta name="image" content="https://kannadabaruthe.com/img/kannada_baruthe_logo.jpg">
+    <meta name="og:url" content="https://kannadabaruthe.com/">
+    <meta name="og:title" content="Learn Spoken Kannada">
+    <meta name="og:image" content="https://kannadabaruthe.com/img/kannada_baruthe_logo.jpg">
+    <meta property="al:ios:app_name" content="Learn spoken Kannada phrases, pronunciation online "/>
+    <meta property="al:android:url" content="applinks://docs"/>
+    <meta property="al:android:app_name" content="Learn spoken Kannada phrases, pronunciation online"/>
+    <meta property="al:android:package" content="com.kannadabaruthe"/>
+    <meta property="al:web:url"
+          content="https://kannadabaruthe.com/"/>
+
+    <!-- CSS  -->
+    <link href="kannada/css/materialize.min.css" type="text/css" rel="stylesheet"/>
+
+    <style>
+
+        .kan {
+            color: black !important;
+        }
+
+        .english {
+            color: gray !important;
+        }
+
+        .english-hover {
+            color: #aeaeae;
+
+        }
+
+        .tutor-text {
+            font-size: 25px;
+
+        }
+
+        .percent {
+            font-size: 25px;
+        }
+
+        .explain-text {
+            font-size: 40px;
+        }
+
+        .teach-box {
+            min-height: 200px !important;
+        }
+
+        .teach-box-small {
+            min-height: 130px !important;
+        }
+
+        .correct-font {
+            font-size: 17px !important;
+        }
+
+        .correct-font-large {
+            min-height: 40px !important;
+        }
+
+        .progress-height {
+            height: 8px !important;
+        }
+
+        .td-hover {
+
+        }
+
+        .en-hidden {
+            margin-left: 30px;
+            color: #aeaeae;
+            display: none;
+        }
+
+        .td-hover:hover > .en-hidden {
+            display: block;
+        }
+
+        .tr-hover {
+            cursor: pointer;
+
+        }
+
+        .tr-hover:hover > .td-hover > .en-hidden {
+            display: block;
+        }
+
+        .tr-hover:hover {
+            font-size: 19px;;
+        }
+
+        .td-hover:hover {
+            font-size: 19px;;
+        }
+
+        .collection a.collection-item {
+            color: #F44336 !important;
+
+        }
+
+        td, th {
+            padding: 5px 5px !important;
+        }
+
+        .music-btn {
+            width: 26px;
+            height: 25px;
+            line-height: 25px;
+        }
+
+        .music-ico {
+            line-height: 25px !important;
+            font-size: 19px !important;
+        }
+
+        @media screen and (min-width: 0px) and (max-width: 500px) {
+            #sidebar {
+                display: none !important;
+            }
+
+            /* show it on small screens */
+            #add-foot {
+                display: none;
+            }
+
+            .fb-page {
+                display: none
+            }
+
+            .fb {
+                display: none;
+            }
+        }
+
+        .collection .collection-item.active {
+            background-color: #F44336 !important;
+            color: white !important;
+        }
+
+        .img {
+            display: block;
+            width: 100% !important;
+            height: auto !important;
+        }
+
+        .wf-loading [class^="icon-"],
+        [class*=" icon-"] {
+            visibility: hidden;
+        }
+
+        .wf-active [class^="icon-"],
+        [class*=" icon-"] {
+            visibility: visible;
+        }
+
+        @keyframes blink {
+            50% {
+                border-color: #ff0000;
+                display: none;
+
+            }
+
+        }
+
+        .fb {
+            /*or other element you want
+            animation: blink 3s step-end infinite alternate;*/
+            border-width: 3px;;
+            border-style: solid;
+        }
+
+
+    </style>
+
+</head>
+
+
+
+
+<body ng-controller="KbController" ng-init="init()">
+
+
+<div class="navbar-fixed" id="kb">
+    <nav class="yellow lighten-1">
+        <div class="nav-wrapper container"><a id="logo-container" href="/" title="Learn Kannada"
+                                              class="brand-logo red-text"><img src="img/KB-Long-Logo.png"
+                                                                               alt="Learn Kannada" height="40"
+                                                                               style="margin-top: 10px;"/></a>
+            <ul class="right hide-on-med-and-down " style="text-transform: uppercase;">
+              
+ 
+                <li><a href="https://play.google.com/store/apps/details?id=com.kannadabaruthe">
+                    <img alt="Learn Kannada on Android" style="margin-top: 10px;"
+                         src="img/en-play-badge.png"/>
+                </a></li>
+            </ul>
+
+            <ul id="nav-mobile" class="side-nav">
+              <!-->  <li><a href="#">Learn Kannada</a></li>
+                  <li><a class="red-text" href="/">Learn Kannada</a></li>
+                !--> 
+               <!--> <li><a class="red-text" href="https://play.google.com/store/apps/details?id=com.kmarkiv.kannada"
+                >Learn Alphabets</a></li>
+                <li><a href="/about">About</a></li>
+                <!--   <li><a href="/blog/">Blog</a></li>!-->
+                 <li><a href="https://play.google.com/store/apps/details?id=com.kannadabaruthe">
+                  Android App
+                </a></li>
+                <li><a href="/contact">Contact Us</a></li>
+            </ul>
+            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="fa fa-bars"></i></a>
+        </div>
+    </nav>
+</div>
+
+
+<div class="container">
+    <br>
+
+    <div class="row">
+        <div class="col s12">
+            <ul class="tabs">
+                <li class="tab col s3"><a class="active" href="#test1">About</a></li>
+                <li class="tab col s3"><a href="#test2">Genesis</a></li>
+            </ul>
+        </div>
+        <div id="test1" class="col s12">
+            <table width="100%" align="center">
+                <tr>
+
+
+                    <td class="content"><br/>
+                        <span class="highlight">ನಮ್ಮ ಬಗ್ಗೆ</span> <br/>
+                        <br/>
+                        ನಾವು, “ಕನ್ನಡ ಬರುತ್ತಾ ?” ಎಂದು ಕೇಳುವ ಬದಲು “ಕನ್ನಡ ಬರುತ್ತೆ !” ಅಂತ ಹೇಳುವ ಹೆಮ್ಮೆಯ ಕನ್ನಡಿಗ IT
+                        ಪ್ರೋಫೆಶಿನಲ್ಸ್ಗಳು.
+                        ನಾವು ಹೆಮ್ಮೆಯಿಂದ ಸಾರ್ವಜನಿಕವಾಗಿ ನಮ್ಮ ನುಡಿ, ಸಂಸ್ಕೃತಿ ಮತ್ತು ನಾಡಿನ ಬಗ್ಗೆ ಪ್ರೀತಿಯನ್ನು ಘೋಷಿಸುತ್ತೇವೆ.
+                        ಕನ್ನಡೇತರ ಸ್ನೇಹಿತರಿಗೆ ಕನ್ನಡ ಕಲಿಯಲು ಸಹಾಯಮಾಡಲು ಇಚ್ಚಿಸುತ್ತೇವೆ.
+                        <br/>
+                        <br/>
+                        <span class="highlight">ನಮ್ಮ ಉದ್ದೇಶಗಳು</span>
+                        <ul>
+                            <li> ಕನ್ನಡವನ್ನು ಸುಲಭವಾದ ಆಡು ಭಾಷೆಯನ್ನಾಗಿಸಲು (ಕನ್ನಡ ಸಾಹಿತ್ಯವನ್ನಲ್ಲ -ನಾವು ಈಗಾಗಲೇ 8 ಜ್ಞಾನಪೀಠ
+                                ಪ್ರಶಸ್ತಿ ಹೊಂದಿದ್ದೇವೆ)
+                            </li>
+                            <li>ನಮ್ಮ ಕನ್ನಡೇತರ ಸ್ನೇಹಿತರಲ್ಲಿ "ಕರ್ನಾಟಕ ದಲ್ಲಿ ಕನ್ನಡವಾಗಿರು "ಎಂಬ ಆಸಕ್ತಿ ಹುಟ್ಟಿಸಲು</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="content"><br/>
+                        We are a group of proud Kannadiga IT professionals who have
+                        transitioned from "Kannada Barutha??" to "Kannada Baruthe!!". We are proud about our language,
+                        culture and land and we want to help our non-Kannadiga
+                        friends realize "Serendipity called Karnataka and Kannada".
+                        <br/>
+                        <br/>
+                        <span class="highlight">Our objectives</span>
+                        <ul>
+                            <li>To promote spoken Kannada and not Kannada literature (we
+                                already have 8 Jnanpith Awardees)
+                            </li>
+                            <li>To instill the desire to "Be a Kannadiga in Karnataka" among
+                                our non-Kannadiga friends
+                            </li>
+                        </ul>
+                        <br/></br/>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+        <div id="test2" class="col s12">
+
+            <br/>
+            Why the name <b>"Kannada Baruthe" ?? (I) know Kannada</b> <BR/>
+            <BR/>
+            It is a dig on two phrases which a Kannadiga (localite of Karnataka)
+            finds very hard and depressing. <BR/>
+            <BR/>
+            <B>"Kannada baralla" </B>!!! (I) don't know Kannada<BR/>
+            This is the first and the only Kannada phrase any non Kannadiga
+            learns. While it is probably good for a non
+            Kannadiga to initially learn this phrase, it is sad that they don't go beyond it. <BR/>
+            <BR>
+
+            <B>"Kannada barutha?" </B>Do you know Kannada? <br/>
+            Not all Kannadiga's, especially in cities like Bengaluru speak Kannada in public, they seem to have
+            inhibitions using the local language publically. Places like Bengaluru with a high influx of migrants are
+            a wonderful set-up to promote the language, unfortunately those who know the language themselves are
+            skeptical of using it, let alone growing it. <br/>
+            The dilution and increasing absence of Kannada in metro parts of Karnataka could also be a result of the
+            nature of Kannadiga's. We are known to be very docile, helpful and non controversial. These very qualities
+            seem to be both boon and a bane, we have become so accommodative that we have compromised our identity.
+            There is an uncertainty about the use of Kannada so deep routed that a Kannadiga will enquire with any
+            stranger (even if it is a localitie) if they know Kannada (Kannada Barutha?) before initiating a discussion
+            in Kannada. While it is comforting that this malice is not spreading in non urbanized parts of Karnataka, it
+            is sad that the opportunity to promote and grow Kannada in places like Bengaluru is being lost.
+            <BR/>
+            <BR/>
+
+            We want to bring some solace to Kannadiga's by tackling these two phrases : "Kannada baralla" and "Kannada
+            barutha?"
+            <BR/>
+            <BR/>
+
+            For friends interested to learn Kannada, this initiative is to encourage them to move from "Kannada Baralla"
+            to "Kannada Baruthe" so that they can closely relate to the land, language and locals here. Kannada is an
+            extremely simple and also the richest regional language with 8 Jnanpith Awards. This site and our android
+            app (Kannada Baruthe) is an effective tool for them to try spoken Kannada.
+            <BR/>
+            <BR/>
+
+            For fellow Kannadigas, while we don't want to promote any communal / cultural disharmony and want to retain
+            the docile nature of Kannadigas intact we want to showcase speaking Kannada in public and teaching Kannada
+            is cool. We are not language fanatics but we feel the need to increase awareness about our language and
+            culture. And, the way to do that is to first feel proud of our language and use it without inhibitions and
+            then teach it to our friends interested to learn Kannada. This site and our android app (Kannada Baruthe)is
+            an effective means to help such a noble cause to spread the spirit of friendship and create an inclusive
+            society.
+            <br/>
+            <br/>
+
+
+        </div>
+
+    </div>
+
+
+</div>
+
+
+
+<footer class="page-footer yellow">
+
+    <div class="footer-copyright">
+        <div class="container" style="color: black!important;">
+            Website by <a class="red-text " style="font-weight: bold" href="http://kmarkiv.com" title="Vikram Kamath">KMARKIV</a>
+        </div>
+    </div>
+</footer>
+<div class="addthis_toolbox addthis_floating_style addthis_32x32_style" id="add-foot"
+     data-url="http://kannadabaruthe.com/index.php" data-title="Learn Kannada"
+     style="position: fixed;right: 5px;top: 100px;z-index: 1000!important;background: transparent!important;">
+    <a class="addthis_counter_facebook"></a>
+    <a class="addthis_counter_twitter"></a>
+    <a class="addthis_button_google_plusone"></a>
+</div>
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-31568912-1']);
+    _gaq.push(['_trackPageview']);
+    (function () {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<!-- Revisit the old plugins if needed !-->
+<!-- Go to www.addthis.com/dashboard to customize your tools
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-55d02c6a6d9f095a" async="async"></script>
+
+
+
+
+<!--  Scripts-->
+<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+
+<script src="kannada/js/materialize.js"></script>
+<script>
+    (function($){
+        $(function(){
+            $('.button-collapse').sideNav();
+
+
+
+
+        }); // end of document ready
+    })(jQuery); // end of jQuery name space
+</script>
+</body>
+</html>
